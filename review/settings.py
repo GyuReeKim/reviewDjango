@@ -58,6 +58,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'review.urls'
 
 # 기본적으로는 앱 안의 templates만 인식한다.
+# 여러 설정을 해주려면 경로를 따로 지정해주어야 한다.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -82,6 +83,7 @@ WSGI_APPLICATION = 'review.wsgi.application'
 
 # DB를 특정 경로로 설정한다.
 # orm의 도움을 받아 다른 언어로 번역해준다.
+# orm은 python 설정을 계속 사용할 수 있도록 해준다.
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -132,3 +134,5 @@ STATIC_URL = '/static/'
 
 # 기본 유저 모델을 사용하지 않고 accounts의 User를 사용한다.
 AUTH_USER_MODEL = 'accounts.User'
+
+# 다른 설정들도 알고있으면 좋다.
